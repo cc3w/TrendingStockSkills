@@ -47,11 +47,11 @@ A 档 MDD ≤8%；B 档 MDD >8%。用户确认容差 15%；B 档上沿 MDD ≤15
 
 ## 5. 候选池与取数
 
-- 全市场名单：**没有**「A 股全代码列表」端点；用 `tdx_daily_package` 上游全量（注册表 `codes` 空时只给主要指数）。
+- **日 K（独立安装默认）**：本 skill `scripts/fetch_kline.py` → 腾讯 `web.ifzq.gtimg.cn` 前复权；`fetch_batch.py` 批量。标准库即可。
+- 候选池：本 skill **不内置全市场名单抓取**；使用者提供 `codes.txt`，或用 `build_universe.py` 从已有代码表过滤。
 - 保留主板：`600/601/603/605`、`000/001/002/003`；剔除创业板 / 科创板 / 北交所 / ST / 窗口停牌 / 零成交。
-- K 线：`fetch_kline.py --bars 90`（`samelen` 的 D_max=72）；**一只一个 `--out-dir`**。
-- `st_stock_list` 可能 exit 2 partial；`fetch_trade_calendar.py` 必须带 `--symbol`。
-- 禁止问财捷径（需 key）；禁止 `em_stock_search` 当 A 股名单源（实测失败）。
+- K 线：`--bars 90`（`samelen` 的 D_max=72）；**一只一个 `--out-dir`**。
+- 若在 Vibe-Research 内使用，仍可用其 `data-access` 取数；落盘 raw 形态兼容即可。
 
 ## 6. 与「埋伏事件」相关的边界
 

@@ -275,11 +275,12 @@ def main() -> None:
     )
     args = ap.parse_args()
     roots = args.kline_root or [
+        "./data/kline-{code}",
+        ".local/runs/shape-scan/kline-{code}",
         ".local/runs/latest-{code}",
         ".local/runs/ambush-{code}",
         ".local/runs/pilot-{code}",
         ".local/runs/verify-{code}",
-        ".local/runs/shape-scan/kline-{code}",
     ]
     cfg = load_profiles(args.profiles)
     stocks = read_codes(args.codes_file)
