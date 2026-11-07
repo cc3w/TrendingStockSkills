@@ -1,0 +1,38 @@
+{
+  "version": "1.2",
+  "as_of": "2026-10-19",
+  "adjustment": "qfq",
+  "notes": [
+    "603980 interval narrowed by user on 2026-10-19 to 2026-08-26..2026-10-13",
+    "Absolute return must NOT be used as a hard filter; use normalized shape features"
+  ],
+  "gates": {
+    "up_min": 0.431,
+    "slope_lo": 0.527,
+    "slope_hi": 4.508,
+    "mdd_a_max": 8.0,
+    "mdd_b_max": 15.0,
+    "tolerance": 0.15
+  },
+  "weights": {
+    "slope": 0.35,
+    "mdd": 0.25,
+    "up": 0.25,
+    "volx": 0.15
+  },
+  "sigma_floor": {
+    "slope": 0.3,
+    "mdd": 0.5,
+    "up": 0.03,
+    "volx": 0.3
+  },
+  "profiles": [
+    {"code": "600573", "name": "惠泉啤酒", "tier": "A", "start": "2026-09-18", "end": "2026-10-15", "days": 14, "ret_pct": 41.44, "slope": 2.96, "mdd_pct": 0.99, "up": 0.846, "limit_up": 0, "volx": 4.29},
+    {"code": "000739", "name": "普洛药业", "tier": "A", "start": "2026-09-16", "end": "2026-09-28", "days": 8, "ret_pct": 18.79, "slope": 2.35, "mdd_pct": 3.32, "up": 0.714, "limit_up": 0, "volx": 1.74},
+    {"code": "000068", "name": "华控赛格", "tier": "A", "start": "2026-07-23", "end": "2026-08-28", "days": 27, "ret_pct": 23.60, "slope": 0.87, "mdd_pct": 3.31, "up": 0.654, "limit_up": 0, "volx": 0.72},
+    {"code": "603608", "name": "天创股份", "tier": "A", "start": "2026-05-08", "end": "2026-06-16", "days": 28, "ret_pct": 109.72, "slope": 3.92, "mdd_pct": 4.55, "up": 0.741, "limit_up": 2, "volx": 1.25},
+    {"code": "002811", "name": "郑中设计", "tier": "B", "start": "2026-07-28", "end": "2026-10-15", "days": 52, "ret_pct": 107.48, "slope": 2.07, "mdd_pct": 12.01, "up": 0.627, "limit_up": 4, "volx": 2.88},
+    {"code": "603980", "name": "吉华集团", "tier": "B", "start": "2026-08-26", "end": "2026-10-13", "days": 29, "ret_pct": 58.31, "slope": 2.01, "mdd_pct": 10.17, "up": 0.714, "limit_up": 3, "volx": 1.82},
+    {"code": "002292", "name": "奥飞娱乐", "tier": "B", "start": "2026-06-29", "end": "2026-10-14", "days": 72, "ret_pct": 44.63, "slope": 0.62, "mdd_pct": 11.32, "up": 0.507, "limit_up": 2, "volx": 1.52}
+  ]
+}
